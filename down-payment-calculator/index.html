@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Down Payment Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Down Payment Calculator</h1>
+            <p class="subtitle">Calculate your down payment options and explore assistance programs</p>
+        </header>
+
+        <div class="calculator-wrapper">
+            <div class="calculator-card">
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="homePrice">Home Price</label>
+                        <div class="input-container">
+                            <span class="currency">$</span>
+                            <input type="text" id="homePrice" placeholder="500000" min="0" step="1000">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="downPaymentType">Down Payment Type</label>
+                        <div class="toggle-buttons">
+                            <button class="toggle-btn active" data-type="percentage">Percentage</button>
+                            <button class="toggle-btn" data-type="dollar">Dollar Amount</button>
+                        </div>
+                    </div>
+
+                    <div class="input-group" id="downPaymentInput">
+                        <label for="downPaymentValue">Down Payment</label>
+                        <div class="input-container">
+                            <span class="currency" id="currencySymbol">%</span>
+                            <input type="number" id="downPaymentValue" placeholder="20" min="0" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="loanType">Loan Type</label>
+                        <select id="loanType">
+                            <option value="conventional">Conventional</option>
+                            <option value="fha">FHA</option>
+                            <option value="va">VA</option>
+                            <option value="usda">USDA</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="results-section">
+                    <h3>Your Down Payment</h3>
+                    <div class="result-card">
+                        <div class="result-item">
+                            <span class="label">Down Payment Amount</span>
+                            <span class="value" id="downPaymentAmount">$0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Loan Amount</span>
+                            <span class="value" id="loanAmount">$0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="label">Down Payment %</span>
+                            <span class="value" id="downPaymentPercent">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="assistance-section">
+                    <h3>Assistance Programs</h3>
+                    <div class="assistance-cards">
+                        <div class="assistance-card">
+                            <h4>First-Time Homebuyer Programs</h4>
+                            <p>You may qualify for down payment assistance up to $10,000</p>
+                            <button class="check-eligibility">Check Eligibility</button>
+                        </div>
+                        <div class="assistance-card">
+                            <h4>FHA Loans</h4>
+                            <p>As low as 3.5% down payment required</p>
+                            <button class="check-eligibility">Learn More</button>
+                        </div>
+                        <div class="assistance-card">
+                            <h4>VA Loans</h4>
+                            <p>0% down payment for eligible veterans</p>
+                            <button class="check-eligibility">Check Eligibility</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scenarios-section">
+                    <h3>Different Down Payment Scenarios</h3>
+                    <div class="scenarios-grid">
+                        <div class="scenario-card">
+                            <div class="scenario-header">
+                                <span class="scenario-title">Minimum (3.5%)</span>
+                                <span class="scenario-amount" id="minDownPayment">$0</span>
+                            </div>
+                            <div class="scenario-details">
+                                <div class="detail-item">
+                                    <span>Monthly Payment</span>
+                                    <span id="minMonthlyPayment">$0</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>PMI Required</span>
+                                    <span>Yes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-header">
+                                <span class="scenario-title">Recommended (20%)</span>
+                                <span class="scenario-amount" id="recDownPayment">$0</span>
+                            </div>
+                            <div class="scenario-details">
+                                <div class="detail-item">
+                                    <span>Monthly Payment</span>
+                                    <span id="recMonthlyPayment">$0</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>PMI Required</span>
+                                    <span>No</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="scenario-card">
+                            <div class="scenario-header">
+                                <span class="scenario-title">Your Selection</span>
+                                <span class="scenario-amount" id="yourDownPayment">$0</span>
+                            </div>
+                            <div class="scenario-details">
+                                <div class="detail-item">
+                                    <span>Monthly Payment</span>
+                                    <span id="yourMonthlyPayment">$0</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>PMI Required</span>
+                                    <span id="yourPMI">No</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>This calculator provides estimates only. Consult with a mortgage professional for accurate calculations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #666666;
+    font-weight: 400;
+}
+
+/* Calculator Wrapper */
+.calculator-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.calculator-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Input Section */
+.input-section {
+    margin-bottom: 40px;
+}
+
+.input-group {
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency {
+    position: absolute;
+    left: 16px;
+    color: #666666;
+    font-weight: 500;
+    z-index: 1;
+    font-size: 1.1rem;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 16px 16px 16px 40px;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000;
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.input-container input::placeholder {
+    color: #999999;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
+    display: flex;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 4px;
+    border: 1px solid #e5e5e5;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    color: #666666;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.toggle-btn.active {
+    background: #000000;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn:hover:not(.active) {
+    background: #e5e5e5;
+    color: #000000;
+}
+
+/* Select Dropdown */
+select {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Results Section */
+.results-section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+}
+
+.results-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.result-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item .label {
+    font-weight: 500;
+    color: #666666;
+    font-size: 1rem;
+}
+
+.result-item .value {
+    font-weight: 700;
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+/* Assistance Section */
+.assistance-section {
+    margin-bottom: 40px;
+}
+
+.assistance-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.assistance-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.assistance-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.2s ease;
+}
+
+.assistance-card:hover {
+    border-color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.assistance-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.assistance-card p {
+    color: #666666;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.check-eligibility {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.check-eligibility:hover {
+    background: #333333;
+    transform: translateY(-1px);
+}
+
+/* Scenarios Section */
+.scenarios-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.scenario-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.2s ease;
+}
+
+.scenario-card:hover {
+    border-color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.scenario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.scenario-title {
+    font-weight: 600;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.scenario-amount {
+    font-weight: 700;
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+.scenario-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.detail-item span:first-child {
+    color: #666666;
+    font-weight: 500;
+}
+
+.detail-item span:last-child {
+    color: #000000;
+    font-weight: 600;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 40px;
+}
+
+.footer p {
+    color: #666666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+    
+    .header {
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .calculator-card {
+        padding: 24px;
+        margin: 0;
+    }
+    
+    .input-container input,
+    select {
+        padding: 14px 14px 14px 36px;
+        font-size: 1rem;
+    }
+    
+    .currency {
+        left: 14px;
+        font-size: 1rem;
+    }
+    
+    .toggle-btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .results-section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .result-item {
+        padding: 12px 0;
+    }
+    
+    .result-item .value {
+        font-size: 1.1rem;
+    }
+    
+    .assistance-cards,
+    .scenarios-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .assistance-card,
+    .scenario-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+    
+    .calculator-card {
+        padding: 20px;
+    }
+    
+    .header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .input-container input,
+    select {
+        padding: 12px 12px 12px 32px;
+        font-size: 0.95rem;
+    }
+    
+    .currency {
+        left: 12px;
+        font-size: 0.95rem;
+    }
+    
+    .toggle-btn {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .results-section {
+        padding: 16px;
+    }
+    
+    .result-item .value {
+        font-size: 1rem;
+    }
+}
+
+/* Focus and Accessibility */
+input:focus,
+select:focus,
+button:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+}
+
+/* Animation for smooth transitions */
+.calculator-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading state */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Error states */
+.error {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1) !important;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
